@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+  --color-tertiary: hsl(var(--tertiary));
+  --color-background: hsl(var(--background));
+  --color-contrast-text: hsl(var(--contrast-text));
+}
+
+/* font-family: "Inter", "Lato" , sans-serif;
+line-height: 0; */
+
+@layer base{
+  :root {
+    --border: 0 0% 70%;
+
+    --primary: 0 0% 10%;
+    --secondary: 0 0% 30%;
+    --tertiary: 0 0% 40%;
+
+    --background: 0 0% 95%;
+    --contrast-text: 0 0% 90%;
+  }
+  .dark {    
+    --border: 0 0% 30%;
+
+    --primary: 0 0% 95%;
+    --secondary: 0 0% 90%;
+    --tertiary: 0 0% 80%;
+    
+    --background: 0 0% 10%;
+    --contrast-text: 0 0% 90%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background;
+  }
+}
+
+/* -webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale; */
+
+@utility container {
+  @apply px-4 sm:px-8;
+  margin-inline: auto;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+@utility button {
+  @apply btn btn-link w-36 h-14 no-underline;
+  color: hsl(var(--secondary));
+}
+
+@utility ul-animation {
+  @apply after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full;
+}
+
+@utility header-text {
+  @apply text-6xl sm:text-7xl lg:text-8xl;
+  color: hsl(var(--primary));
+  font-family: "Inter", sans-serif;
+}
+
+@utility desc-text {
+  @apply text-xl sm:text-2xl lg:text-4xl;
+  color: hsl(var(--secondary));
+  font-family: "Lato", sans-serif;
+}
+
+@utility sub-desc-text {
+  @apply text-base sm:text-lg lg:text-xl;
+  color: hsl(var(--secondary));
+  font-family: "Lato", sans-serif;
+}
+
+@utility content-text {
+  @apply text-base sm:text-lg lg:text-xl;
+  color: hsl(var(--tertiary));
+  font-family: "Lato", sans-serif;
+}
+
+@utility quote {
+  @apply content-text italic;
+  color: hsl(var(--secondary));
+  font-family: "Lato", sans-serif;
+}
+
+@utility navbar {
+  @apply mx-auto justify-center lg:justify-start px-2 sm:px-4 lg:px-6 py-2 sm:py-1 gap-4 sm:gap-8 lg:gap-11 border-b;
+  color: hsl(var(--tertiary));
+}
+
+@utility navbar-text {
+  @apply text-base md:text-xl;
+  color: hsl(var(--tertiary));
+  font-family: "Lato", sans-serif;
+}
+
+@utility navbar-active {
+  @apply text-base md:text-xl font-bold;
+  color: hsl(var(--primary));
+  font-family: "Lato", sans-serif;
+}
+
+@utility icons {
+  @apply w-10 h-auto;
+  color: hsl(var(--secondary));
+}
+
+#root {
+   max-width: 100%;
+   margin: 0 auto;
+   padding: 0;
+   text-align: left;
+   font-family: "Lato", "Inter", sans-serif;
+}
