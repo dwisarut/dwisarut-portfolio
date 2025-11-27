@@ -1,5 +1,6 @@
 import { easeInOut, useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import Breadcrumbs from "./Breadcrumbs";
 
 interface Project {
   title: string;
@@ -71,6 +72,16 @@ const Project = () => {
     load();
   }, []);
 
+  // useEffect(() => {
+  //   controls.start({
+  //     x: "100vh",
+  //     opacity: 0,
+  //     transition: { duration: 0.2, ease: easeInOut },
+  //   });
+
+  //   const navToDetail = () => {};
+  // });
+
   return (
     <>
       <motion.div
@@ -78,20 +89,22 @@ const Project = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6">
+        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
           Project
         </h1>
 
+        <Breadcrumbs />
+
         {isLoading ? (
-          <div className="flex justify-center items-center mt-12">
+          <div className="flex justify-center items-center mt-6">
             <p className="text-black/50">Loading projects...</p>
           </div>
         ) : projects.length === 0 ? (
-          <div className="flex justify-center items-center mt-12">
+          <div className="flex justify-center items-center mt-6">
             <p className="text-black/50">No projects found</p>
           </div>
         ) : (
-          <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start gap-6 mt-12">
+          <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start gap-6 mt-6">
             {projects.map((proj) => (
               <motion.div
                 key={proj.title}
