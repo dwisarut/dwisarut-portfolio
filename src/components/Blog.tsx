@@ -84,7 +84,7 @@ const Blog = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6">
+        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
           Blogs
         </h1>
         <Breadcrumbs allBlogs={blogs} />
@@ -102,7 +102,7 @@ const Blog = () => {
               <motion.div
                 key={blog.title}
                 whileHover={{ scale: 1.02 }}
-                className="card lg:card-side bg-white flex-none w-full lg:h-60 hover:shadow-sm cursor-pointer"
+                className="card bg-white lg:card-side flex-none w-full lg:h-60 hover:shadow-sm cursor-pointer"
               >
                 <figure>
                   {blog.cover && (
