@@ -4,6 +4,8 @@ import Breadcrumbs from "./Breadcrumbs";
 
 interface Project {
   title: string;
+  slug: string;
+  type: "project" | "blog";
   synopsis: string;
   tag: string[];
   cover: string;
@@ -13,6 +15,8 @@ interface MDXModule {
   default: React.FC;
   frontmatter?: {
     title?: string;
+    slug?: string;
+    type?: "project" | "blog";
     synopsis?: string;
     tag?: string[];
     cover?: string;
@@ -56,6 +60,8 @@ const Project = () => {
             return {
               title: mod.frontmatter?.title || "Untitled Project",
               synopsis: mod.frontmatter?.synopsis || "No description available",
+              slug: mod.frontmatter?.slug || "untitled",
+              type: mod.frontmatter?.type || "project",
               tag: mod.frontmatter?.tag || [],
               cover: mod.frontmatter?.cover || "",
               component: mod.default,
@@ -72,16 +78,6 @@ const Project = () => {
     load();
   }, []);
 
-  // useEffect(() => {
-  //   controls.start({
-  //     x: "100vh",
-  //     opacity: 0,
-  //     transition: { duration: 0.2, ease: easeInOut },
-  //   });
-
-  //   const navToDetail = () => {};
-  // });
-
   return (
     <>
       <motion.div
@@ -93,7 +89,7 @@ const Project = () => {
           Project
         </h1>
 
-        <Breadcrumbs />
+        <Breadcrumbs allProjects={projects} />
 
         {isLoading ? (
           <div className="flex justify-center items-center mt-6">
@@ -104,7 +100,7 @@ const Project = () => {
             <p className="text-black/50">No projects found</p>
           </div>
         ) : (
-          <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start gap-6 mt-6">
+          <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start md:w-full gap-6 mt-6">
             {projects.map((proj) => (
               <motion.div
                 key={proj.title}
