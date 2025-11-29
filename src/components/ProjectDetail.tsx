@@ -108,12 +108,12 @@ const ProjectDetail = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
+        <Breadcrumbs allProjects={projects} />
         <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
           {project.title}
         </h1>
 
-        <Breadcrumbs allProjects={projects} />
-        <div className="prose prose-lg max-w-none dark:prose-invert text-[hsl(0_0%_30%)]">
+        <div className="prose prose-lg max-w-none dark:prose-invert">
           {componentReady && <ProjectComponent key={project.slug} />}
         </div>
       </motion.div>
