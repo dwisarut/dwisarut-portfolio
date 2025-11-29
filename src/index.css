@@ -132,6 +132,10 @@ line-height: 0; */
   color: hsl(var(--secondary));
 }
 
+@utility prose {
+  @apply prose-h1:text-[hsl(0_0%_10%)] prose-h2:text-[hsl(0_0%_30%)] prose-h3:text-[hsl(0_0%_30%)] text-[hsl(0_0%_30%)]
+}
+
 #root {
    max-width: 100%;
    margin: 0 auto;
