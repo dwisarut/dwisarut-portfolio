@@ -1,6 +1,5 @@
 import { easeInOut, useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import Breadcrumbs from "./Breadcrumbs";
 import { useNavigate } from "react-router-dom";
 
 interface Blog {
@@ -89,7 +88,6 @@ const Blog = () => {
         <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
           Blogs
         </h1>
-        <Breadcrumbs allBlogs={blogs} />
         {isLoading ? (
           <div className="flex justify-center items-center mt-6">
             <p className="text-black/50">Loading projects...</p>

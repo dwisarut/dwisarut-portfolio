@@ -133,7 +133,7 @@ line-height: 0; */
 }
 
 @utility prose {
-  @apply prose-h1:text-[hsl(0_0%_10%)] prose-h2:text-[hsl(0_0%_30%)] prose-h3:text-[hsl(0_0%_30%)] text-[hsl(0_0%_30%)] prose-ol:list-decimal prose-li:marker:text-[hsl(0_0%_30%)] prose-ul:list-disc
+  @apply prose-h1:text-[hsl(0_0%_10%)] prose-h2:text-[hsl(0_0%_30%)] prose-h3:text-[hsl(0_0%_30%)] text-[hsl(0_0%_30%)] prose-ol:list-decimal prose-li:marker:text-[hsl(0_0%_30%)] prose-ul:list-disc prose-hr:border-[hsl(0_0%__80%)]
 }
 
 #root {
