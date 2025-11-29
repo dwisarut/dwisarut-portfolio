@@ -1,6 +1,7 @@
 import { easeInOut, useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Breadcrumbs from "./Breadcrumbs";
+import { useNavigate } from "react-router-dom";
 
 interface Blog {
   title: string;
@@ -29,6 +30,7 @@ const Blog = () => {
   const controls = useAnimation();
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     controls.set({ opacity: 0, y: -20 });
@@ -103,6 +105,7 @@ const Blog = () => {
                 key={blog.title}
                 whileHover={{ scale: 1.02 }}
                 className="card bg-white lg:card-side flex-none w-full lg:h-60 hover:shadow-sm cursor-pointer"
+                onClick={() => navigate(`/blog/${blog.slug}`)}
               >
                 <figure>
                   {blog.cover && (

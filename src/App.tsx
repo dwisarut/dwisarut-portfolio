@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Work from "./components/Work";
 import Blog from "./components/Blog";
 import Project from "./components/Project";
+import ProjectDetail from "./components/ProjectDetail";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/work" element={<Work />} />
             <Route path="/project" element={<Project />} />
+            <Route path="/project/:slug" element={<ProjectDetail />} />
             <Route path="/blog" element={<Blog />} />
           </Routes>
         </div>

@@ -22,14 +22,12 @@ const Breadcrumbs = ({ allProjects = [], allBlogs = [] }: breadcrumbProp) => {
   const { slug } = useParams();
   const crumbs: { page: string; href: string }[] = [];
 
-  if (
-    !location.pathname.startsWith("/project") &&
-    !location.pathname.startsWith("/blog")
-  ) {
+  const path = location.pathname;
+  if (!path.startsWith("/project") && !path.startsWith("/blog")) {
     return null;
   }
 
-  if (location.pathname.startsWith("/project")) {
+  if (path.startsWith("/project")) {
     crumbs.push({ page: "Project", href: "/project" });
 
     if (slug) {
@@ -40,7 +38,7 @@ const Breadcrumbs = ({ allProjects = [], allBlogs = [] }: breadcrumbProp) => {
     }
   }
 
-  if (location.pathname.startsWith("/blog")) {
+  if (path.startsWith("/blog")) {
     crumbs.push({ page: "Blog", href: "/blog" });
 
     if (slug) {
@@ -56,10 +54,10 @@ const Breadcrumbs = ({ allProjects = [], allBlogs = [] }: breadcrumbProp) => {
       <div className="w-full breadcrumbs text-sm md:text-base text-[hsl(0_0%_40%)]">
         <ul>
           {crumbs.map((item) => {
-            const currPage = location.pathname === item.href;
+            const currPage = path.startsWith(item.href);
 
             return (
-              <li className={currPage ? "font-bold" : ""}>
+              <li key={item.href} className={currPage ? "font-bold" : ""}>
                 <a onClick={() => navigate(item.href)}>{item.page}</a>
               </li>
             );

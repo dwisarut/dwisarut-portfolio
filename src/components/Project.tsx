@@ -1,6 +1,7 @@
 import { easeInOut, useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Breadcrumbs from "./Breadcrumbs";
+import { useNavigate } from "react-router-dom";
 
 interface Project {
   title: string;
@@ -29,6 +30,7 @@ const Project = () => {
   const controls = useAnimation();
   const [projects, setProjects] = useState<Project[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     controls.set({ opacity: 0, y: -20 });
@@ -132,7 +134,10 @@ const Project = () => {
                     ))}
                   </div>
                   <div className="card-actions self-end">
-                    <button className="btn btn-neutral btn-outline mt-4">
+                    <button
+                      className="btn btn-neutral btn-outline mt-4"
+                      onClick={() => navigate(`/project/${proj.slug}`)}
+                    >
                       Learn more
                     </button>
                   </div>
