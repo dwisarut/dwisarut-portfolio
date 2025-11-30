@@ -135,7 +135,7 @@ const ProjectDetail = () => {
           ))}
         </div>
 
-        <div className="prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg">
+        <div className="prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
           {componentReady && <ProjectComponent key={project.slug} />}
         </div>
       </motion.div>

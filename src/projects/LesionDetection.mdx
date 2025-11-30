@@ -8,12 +8,23 @@ tag:
 cover: "/CT-Scan.png"
 ---
 
-# Project A
+![CT-scan Highlight](/CT-Scan.png)
+This is the contracted project commissioned by the doctor, which is the automated python script that ran when taking screenshot in the CT-scan in order to find the tumor, wound, or
+other anomaly within the patient body. I'm responsible for **fine-tuning the parameters** that utilized K-mean cluttering and post-processing parameters, while also **migrating the script** from
+direct file input to automated in-memory input pipeline.
 
-This is the **main content** that will show in "Learn More".
+### The problem
 
-You can add images, code blocks, and any markdown content here:
+---
 
-```ts
-console.log("Hello MDX");
-```
+There are multiple problems that hinder our progress, mostly technical stuff with some timing inconveniences.
+
+- Inconsistent input that incompatiable with tuned pipeline (eg. file types).
+- Difficulty in testing the result with accurate environment, as they use the paid version of RadiAnt DICOM Viewer, we can't conveniently test it with our machine.
+- Small test samples.
+
+### Action
+
+---
+
+At the moment, I'm not done with this project. I will update this project later...
