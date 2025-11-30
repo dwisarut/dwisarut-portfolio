@@ -38,7 +38,7 @@ const AboutMe = () => {
         <div className="flex flex-col lg:flex-row mt-12 gap-10">
           <img
             src={HeroImage}
-            className="w-full max-w-xs sm:max-w-sm md:max-w-md h-auto object-contain mx-auto md:mx-0"
+            className="w-full max-w-xs sm:max-w-sm md:max-w-md md:self-center h-auto object-contain mx-auto md:mx-0"
           />
           <div className="flex flex-col gap-6 w-full md:pl-5">
             <blockquote className="quote pl-4 border-l-8 wrap-break-word">
