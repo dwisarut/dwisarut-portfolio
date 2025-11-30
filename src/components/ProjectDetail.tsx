@@ -40,6 +40,17 @@ const ProjectDetail = () => {
       y: 0,
       transition: { duration: 0.2, ease: easeInOut, delay: 0.2 },
     });
+
+    const handleExit = () => {
+      controls.start({
+        x: "100vh",
+        opacity: 0,
+        transition: { duration: 0.4, ease: easeInOut },
+      });
+    };
+
+    window.addEventListener("to-home", handleExit);
+    return () => window.removeEventListener("to-home", handleExit);
   });
 
   useEffect(() => {
@@ -109,11 +120,22 @@ const ProjectDetail = () => {
         initial={{ opacity: 0, y: -20 }}
       >
         <Breadcrumbs allProjects={projects} />
-        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
+        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-6">
           {project.title}
         </h1>
 
-        <div className="prose prose-lg max-w-none dark:prose-invert prose-hr:my-6">
+        <div className="flex gap-2 mt-3 flex-wrap text-base-100">
+          {project.tag.map((t) => (
+            <span
+              key={t}
+              className="px-2 py-1 text-xs rounded-full text-white bg-black/80"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+
+        <div className="prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg">
           {componentReady && <ProjectComponent key={project.slug} />}
         </div>
       </motion.div>

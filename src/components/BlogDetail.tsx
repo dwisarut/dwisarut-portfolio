@@ -40,6 +40,17 @@ const ProjectDetail = () => {
       y: 0,
       transition: { duration: 0.2, ease: easeInOut, delay: 0.2 },
     });
+
+    const handleExit = () => {
+      controls.start({
+        x: "100vh",
+        opacity: 0,
+        transition: { duration: 0.4, ease: easeInOut },
+      });
+    };
+
+    window.addEventListener("to-home", handleExit);
+    return () => window.removeEventListener("to-home", handleExit);
   });
 
   useEffect(() => {
