@@ -15,8 +15,9 @@ tag:
 cover: "/ImageFetcher.png"
 ---
 
-This is the commissioned project from synthetic flower decoration company (let's called them Flower Corp.), which can fetch pictures from Google Drive via Breadth-First Search Algorithm and Google API.
-However, I'm not responsible for the search algorithm implementation, but the LINE bot's API and LINE webhook API integration.
+![Image Fetcher](/ImageFetcher.png)
+This is the contracted project done for Finesse Flower Manufacturing Co., Ltd. which can fetch pictures from Google Drive via Breadth-First Search Algorithm and Google API.
+However, I'm not responsible for the search algorithm implementation, but the **LINE bot's API and LINE webhook API integration**.
 
 ### The problem
 
@@ -24,8 +25,37 @@ However, I'm not responsible for the search algorithm implementation, but the LI
 
 The problems that our customer presented are mainly:
 
-1. Difficulty tracking the prop's progress.
-2. Communication between Flower Corp. and their customer, or their internal communication.
-3. They used to have their own functioning bot, but their bot's service is discontinue.
+- Difficulty tracking the prop's progress.
+- Communication between Flower Corp. and their customer, or their internal communication.
+- They used to have their own functioning bot, but their bot's service is discontinue.
 
-As you can see, this is their requirement that we need to address, but we also encounter multiple problems while we developing the bot.
+As you can see, this is their requirement that we need to address, but we also encounter multiple problems while we developing the bot such as:
+
+- Budget constraint resulting in the limited deployment platform option.
+- Miscommunication between our team and our customer.
+- User Experiences while using the bot.
+- Response time is too slow (approximately 1 minute after text command).
+
+### Action
+
+---
+
+There are multiple problem which related to technical issue , so our actions toward these problems are:
+
+1. Optimizing the LINE message response within Python's line-sdk-v4 (textMessage and pushMessageRequest).
+2. More communication and testing, with customer's feedback.
+3. Warm caching for more frequent pictures.
+
+### Result
+
+---
+
+1. Due to the message optimization, resulted in decreasing LINE package cost significantly, left with only monthly deployment cost.
+2. Instantaneous response time after text command, utilizing parallel threading.
+3. Addressed multiple UX issue, such as proximity search from incomplete product code by user, image carousel for big bundles of pictures, and text command instructions for user.
+
+<div className="flex flex-col w-full items-center lg:flex-row lg:justify-between gap-1">
+  <img className="w-sm" src="/imgf_prev1.jpg" alt="Preview 1" />
+  <img className="w-sm" src="/imgf_prev2.jpg" alt="Preview 2" />
+  <img className="w-sm" src="/imgf_prev3.jpg" alt="Preview 3" />
+</div>
