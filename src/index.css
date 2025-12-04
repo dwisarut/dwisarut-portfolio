@@ -12,9 +12,6 @@
   --color-contrast-text: hsl(var(--contrast-text));
 }
 
-/* font-family: "Inter", "Lato" , sans-serif;
-line-height: 0; */
-
 @layer base{
   :root {
     --border: 0 0% 70%;
@@ -49,9 +46,6 @@ line-height: 0; */
     @apply bg-background;
   }
 }
-
-/* -webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale; */
 
 @utility container {
   @apply px-4 sm:px-8;
