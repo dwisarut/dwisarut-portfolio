@@ -8,6 +8,7 @@ interface Project {
   slug: string;
   type: "project" | "blog";
   synopsis: string;
+  date: string;
   tag: string[];
   cover: string;
   component: React.FC;
@@ -18,6 +19,7 @@ interface MDXModule {
     title?: string;
     slug?: string;
     type?: "project" | "blog";
+    date: string;
     synopsis?: string;
     tag?: string[];
     cover?: string;
@@ -64,6 +66,7 @@ const ProjectDetail = () => {
               synopsis: mod.frontmatter?.synopsis || "No description available",
               slug: mod.frontmatter?.slug || "untitled",
               type: mod.frontmatter?.type || "project",
+              date: mod.frontmatter?.date || "undefined",
               tag: mod.frontmatter?.tag || [],
               cover: mod.frontmatter?.cover || "",
               component: mod.default,
@@ -123,6 +126,10 @@ const ProjectDetail = () => {
         <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-6">
           {project.title}
         </h1>
+
+        <p className="text-base text-[hsl(0_0%_40%)] mt-2 mb-2">
+          Date posted: {project.date}
+        </p>
 
         <div className="flex gap-2 mt-3 flex-wrap text-base-100">
           {project.tag.map((t) => (

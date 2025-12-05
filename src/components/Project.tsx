@@ -7,6 +7,7 @@ interface Project {
   slug: string;
   type: "project" | "blog";
   synopsis: string;
+  date: string;
   tag: string[];
   cover: string;
   component: React.FC;
@@ -17,6 +18,7 @@ interface MDXModule {
     title?: string;
     slug?: string;
     type?: "project" | "blog";
+    date: string;
     synopsis?: string;
     tag?: string[];
     cover?: string;
@@ -63,6 +65,7 @@ const Project = () => {
               synopsis: mod.frontmatter?.synopsis || "No description available",
               slug: mod.frontmatter?.slug || "untitled",
               type: mod.frontmatter?.type || "project",
+              date: mod.frontmatter?.date || "undefined",
               tag: mod.frontmatter?.tag || [],
               cover: mod.frontmatter?.cover || "",
               component: mod.default,
@@ -119,6 +122,7 @@ const Project = () => {
                   <h2 className="card-title text-black text-2xl self-start">
                     {proj.title}
                   </h2>
+                  <p className="text-base text-[hsl(0_0%_40%)]">{proj.date}</p>
                   <p className="text-black/70 mt-2">{proj.synopsis}</p>
                   <div className="flex gap-2 mt-3 flex-wrap text-base-100">
                     {proj.tag.map((t) => (
