@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { easeInOut, motion, useAnimation } from "framer-motion";
 import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-import ResumePDF from "../assets/Wisarut_Donsri_CV.pdf";
 import { useEffect } from "react";
 
 const LandingPage = () => {
@@ -50,7 +49,7 @@ const LandingPage = () => {
               About Me
             </button>
             <Link
-              to={ResumePDF}
+              to="/Wisarut_Donsri_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="flex button contain-content text-xl sm:text-2xl ul-animation"

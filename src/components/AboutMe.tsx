@@ -1,5 +1,5 @@
 import { easeInOut, useAnimation, motion } from "framer-motion";
-import HeroImage from "../assets/mewvvyzz.png";
+import HeroImage from "/heropic.png";
 import { useEffect } from "react";
 
 const AboutMe = () => {

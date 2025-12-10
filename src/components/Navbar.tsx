@@ -1,5 +1,4 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import ResumePDF from "../assets/Wisarut_Donsri_CV.pdf";
 import { useEffect } from "react";
 import { easeInOut, useAnimation, motion } from "framer-motion";
 import {
@@ -21,7 +20,7 @@ interface NavItems {
 const navItems: NavItems[] = [
   { name: "Home", href: "/", icon: House },
   { name: "About Me", href: "/aboutme", icon: User },
-  { name: "Resume", href: ResumePDF, icon: FileUser },
+  { name: "Resume", href: "/Wisarut_Donsri_CV.pdf", icon: FileUser },
   { name: "Work", href: "/work", icon: BriefcaseBusiness },
   { name: "Project", href: "/project", icon: FolderGit2 },
   { name: "Blog", href: "/blog", icon: LayoutPanelLeft },
