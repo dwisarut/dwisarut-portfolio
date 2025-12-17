@@ -115,7 +115,7 @@ const Navbar = () => {
                   <button
                     key={item.name}
                     onClick={homeNavigation}
-                    className="flex flex-row gap-3 items-center navbar-text hover:cursor-pointer  transition-all"
+                    className="flex flex-row gap-3 items-center navbar-text hover:cursor-pointer hover:text-amber-300  transition-all"
                   >
                     <Icon size={18} />
                     <span className="hidden md:inline">{item.name}</span>
@@ -130,7 +130,7 @@ const Navbar = () => {
                     to={item.href}
                     target="_blank"
                     rel="noopener noreferer"
-                    className="flex flex-row gap-3 items-center navbar-text  transition-all"
+                    className="flex flex-row gap-3 items-center navbar-text  transition-all hover:text-amber-300"
                   >
                     <Icon size={18} />
                     <span className="hidden md:inline">{item.name}</span>
@@ -142,8 +142,8 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`flex flex-row gap-3 items-center navbar-text ${
-                    isActive ? "navbar-active" : ""
+                  className={`flex flex-row gap-3 items-center navbar-text hover:text-amber-300 ${
+                    isActive ? "navbar-active text-amber-300" : ""
                   } transition-all`}
                 >
                   <Icon size={18} />
