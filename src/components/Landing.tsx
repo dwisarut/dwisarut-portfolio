@@ -44,7 +44,7 @@ const LandingPage = () => {
           <div className="flex flex-col gap-10 self-center lg:flex-row lg:gap-20">
             <button
               onClick={() => handleNavigation("/aboutme")}
-              className="flex button contain-content text-xl sm:text-2xl ul-animation"
+              className="flex button contain-content text-xl ul-animation"
             >
               About Me
             </button>
@@ -52,7 +52,7 @@ const LandingPage = () => {
               to="/Wisarut_Donsri_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex button contain-content text-xl sm:text-2xl ul-animation"
+              className="flex button contain-content text-xl ul-animation"
             >
               Resume
             </Link>
@@ -60,13 +60,13 @@ const LandingPage = () => {
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
             <button
               onClick={() => handleNavigation("/work")}
-              className="flex button contain-content text-xl sm:text-2xl ul-animation"
+              className="flex button contain-content text-xl ul-animation"
             >
               Work
             </button>
             <button
               onClick={() => handleNavigation("/project")}
-              className="flex button contain-content text-xl sm:text-2xl ul-animation"
+              className="flex button contain-content text-xl ul-animation"
             >
               Project
             </button>

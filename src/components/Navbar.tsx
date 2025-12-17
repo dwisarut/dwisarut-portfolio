@@ -97,52 +97,61 @@ const Navbar = () => {
         animate={controls}
         className="w-full bg-background fixed bottom-0 md:sticky md:top-0 z-50"
       >
-        <div className="flex w-full container navbar justify-evenly md:justify-start items-center py-2 md:py-4">
-          {navItems.map((item) => {
-            const isActive = location.pathname === item.href;
-            const Icon = item.icon;
+        <div className="flex w-full container navbar justify-evenly md:justify-between items-center py-2 md:py-4">
+          <a>
+            <img
+              src="/dw.svg"
+              className="w-16 h-auto hover:cursor-pointer"
+              onClick={homeNavigation}
+            />
+          </a>
+          <div className="flex self-center gap-10">
+            {navItems.map((item) => {
+              const isActive = location.pathname === item.href;
+              const Icon = item.icon;
 
-            if (item.name === "Home") {
-              return (
-                <button
-                  key={item.name}
-                  onClick={homeNavigation}
-                  className="flex flex-row gap-3 items-center navbar-text hover:cursor-pointer hover:-translate-y-0.5 transition-all"
-                >
-                  <Icon size={18} />
-                  <span className="hidden md:inline">{item.name}</span>
-                </button>
-              );
-            }
+              if (item.name === "Home") {
+                return (
+                  <button
+                    key={item.name}
+                    onClick={homeNavigation}
+                    className="flex flex-row gap-3 items-center navbar-text hover:cursor-pointer  transition-all"
+                  >
+                    <Icon size={18} />
+                    <span className="hidden md:inline">{item.name}</span>
+                  </button>
+                );
+              }
 
-            if (item.name === "Resume") {
+              if (item.name === "Resume") {
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    target="_blank"
+                    rel="noopener noreferer"
+                    className="flex flex-row gap-3 items-center navbar-text  transition-all"
+                  >
+                    <Icon size={18} />
+                    <span className="hidden md:inline">{item.name}</span>
+                  </Link>
+                );
+              }
+
               return (
                 <Link
                   key={item.name}
                   to={item.href}
-                  target="_blank"
-                  rel="noopener noreferer"
-                  className="flex flex-row gap-3 items-center navbar-text hover:-translate-y-0.5 transition-all"
+                  className={`flex flex-row gap-3 items-center navbar-text ${
+                    isActive ? "navbar-active" : ""
+                  } transition-all`}
                 >
                   <Icon size={18} />
                   <span className="hidden md:inline">{item.name}</span>
                 </Link>
               );
-            }
-
-            return (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`flex flex-row gap-3 items-center navbar-text ${
-                  isActive ? "navbar-active" : "hover:-translate-y-0.5"
-                } transition-all`}
-              >
-                <Icon size={18} />
-                <span className="hidden md:inline">{item.name}</span>
-              </Link>
-            );
-          })}
+            })}
+          </div>
         </div>
       </motion.nav>
     </>
