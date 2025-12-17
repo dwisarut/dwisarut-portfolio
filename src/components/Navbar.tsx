@@ -100,8 +100,8 @@ const Navbar = () => {
         <div className="flex w-full container navbar justify-evenly md:justify-between items-center py-2 md:py-4">
           <a>
             <img
-              src="/dw.svg"
-              className="w-16 h-auto hover:cursor-pointer"
+              src="/LogoExtend.svg"
+              className="w-24 h-auto hover:cursor-pointer"
               onClick={homeNavigation}
             />
           </a>

@@ -93,16 +93,16 @@ const Work = () => {
                     item.position === "start" ? "md:text-end" : "md:text-start"
                   }`}
                 >
-                  <time className="font-mono italic text-[hsl(0_0%_40%)]">
+                  <time className="font-mono italic text-[hsl(0_0%_90%)]">
                     {item.date}
                   </time>
-                  <div className="text-base sm:text-lg text-[hsl(0_0%_30%)] lg:text-xl font-bold">
+                  <div className="text-base sm:text-lg text-[hsl(0_0%_90%)] lg:text-xl font-bold">
                     {item.role}
                   </div>
-                  <div className="text-base text-[hsl(0_0%_40%)]">
+                  <div className="text-base text-[hsl(0_0%_90%)]">
                     {item.company}
                   </div>
-                  <div className="text-base md:text-lg mt-2 md:mt-3 text-[hsl(0_0%_40%)]">
+                  <div className="text-base md:text-lg mt-2 md:mt-3 text-[hsl(0_0%_90%)]">
                     {item.desc}
                   </div>
                 </div>

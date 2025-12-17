@@ -127,7 +127,7 @@ const ProjectDetail = () => {
           {project.title}
         </h1>
 
-        <p className="text-base text-[hsl(0_0%_40%)] mt-2 mb-2">
+        <p className="text-base text-[hsl(0_0%_80%)] mt-2 mb-2">
           Date posted: {project.date}
         </p>
 
@@ -135,7 +135,7 @@ const ProjectDetail = () => {
           {project.tag.map((t) => (
             <span
               key={t}
-              className="px-2 py-1 text-xs rounded-full text-white bg-black/80"
+              className="px-2 py-1 text-xs rounded-full text-[hsl(0_0%_90%)] bg-black/80 border border-[hsl(0_0%_90%)]"
             >
               {t}
             </span>

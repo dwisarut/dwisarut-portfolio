@@ -42,10 +42,8 @@ const AboutMe = () => {
           />
           <div className="flex flex-col gap-6 w-full md:pl-5">
             <blockquote className="quote pl-4 border-l-8 wrap-break-word">
-              “Wherever I go, there will be a fixation on optimization for
-              efficiency. Be it cost, resource, or productivity, there are
-              multiple ways to optimize these things, but I believe that coding
-              as a solution is the most elegant and efficient of all.”
+              “Programming to create a solution is very cool and all, I just
+              want to create beautiful interfaces.”
             </blockquote>
 
             <p className="content-text wrap-break-word">
