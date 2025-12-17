@@ -78,7 +78,7 @@
 }
 
 @utility navbar-text {
-  @apply text-base md:text-xl;
+  @apply text-base lg:text-xl;
   color: hsl(var(--tertiary));
   font-family: "Lato", sans-serif;
 }
