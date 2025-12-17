@@ -7,7 +7,6 @@ import {
   FileUser,
   BriefcaseBusiness,
   FolderGit2,
-  LayoutPanelLeft,
   type LucideIcon,
 } from "lucide-react";
 
@@ -23,7 +22,6 @@ const navItems: NavItems[] = [
   { name: "Resume", href: "/Wisarut_Donsri_CV.pdf", icon: FileUser },
   { name: "Work", href: "/work", icon: BriefcaseBusiness },
   { name: "Project", href: "/project", icon: FolderGit2 },
-  { name: "Blog", href: "/blog", icon: LayoutPanelLeft },
 ];
 
 const Navbar = () => {

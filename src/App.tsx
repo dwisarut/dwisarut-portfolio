@@ -4,8 +4,6 @@ import AboutMe from "./components/AboutMe";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Work from "./components/Work";
-import Blog from "./components/Blog";
-import BlogDetail from "./components/BlogDetail";
 import Project from "./components/Project";
 import ProjectDetail from "./components/ProjectDetail";
 
@@ -21,8 +19,6 @@ function App() {
             <Route path="/work" element={<Work />} />
             <Route path="/project" element={<Project />} />
             <Route path="/project/:slug" element={<ProjectDetail />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogDetail />} />
           </Routes>
         </div>
       </BrowserRouter>

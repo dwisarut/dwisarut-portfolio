@@ -71,14 +71,6 @@ const LandingPage = () => {
               Project
             </button>
           </div>
-          <div className="flex flex-col lg:flex-row items-center justify-center">
-            <button
-              onClick={() => handleNavigation("/blog")}
-              className="flex button contain-content text-xl sm:text-2xl ul-animation"
-            >
-              Blog
-            </button>
-          </div>
         </div>
         <div className="flex mt-12 justify-center gap-5">
           <Link
