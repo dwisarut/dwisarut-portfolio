@@ -41,7 +41,7 @@ const workHistory = [
 const Work = () => {
   return (
     <>
-      <div className="flex flex-col bg-background min-h-screen w-full">
+      <div className="flex flex-col bg-background w-full">
         <ul
           className="timeline timeline-snap-icon max-xl:timeline-compact timeline-vertical"
           role="list"
