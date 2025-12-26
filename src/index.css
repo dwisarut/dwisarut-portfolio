@@ -47,42 +47,23 @@
 }
 
 @utility header-text {
-  @apply text-5xl sm:text-6xl lg:text-7xl;
-  font-family: "Inter", sans-serif;
+  @apply text-5xl sm:text-6xl lg:text-7xl inter;
 }
 
 @utility desc-text {
-  @apply text-xl sm:text-2xl;
-  font-family: "Lato", sans-serif;
+  @apply text-xl sm:text-2xl inter;
 }
 
 @utility sub-desc-text {
-  @apply text-base sm:text-lg lg:text-xl;
-  font-family: "Lato", sans-serif;
+  @apply text-base sm:text-lg lg:text-xl inter;
 }
 
 @utility content-text {
-  @apply text-base sm:text-lg lg:text-xl;
-  font-family: "Lato", sans-serif;
+  @apply text-base sm:text-lg lg:text-xl inter;
 }
 
 @utility quote {
   @apply content-text italic;
-  font-family: "Lato", sans-serif;
-}
-
-@utility navbar {
-  @apply mx-auto justify-center lg:justify-start px-2 sm:px-4 lg:px-6 py-2 sm:py-1 gap-4 sm:gap-8 lg:gap-11 border-b;
-  color: hsl(var(--tertiary));
-}
-
-@utility navbar-text {
-  @apply text-base lg:text-xl;
-  font-family: "Lato", sans-serif;
-}
-
-@utility navbar-active {
-  @apply text-base md:text-xl font-bold;
   font-family: "Lato", sans-serif;
 }
 
