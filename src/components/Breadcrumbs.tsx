@@ -12,18 +12,19 @@ interface metaData {
 
 interface breadcrumbProp {
   allProjects?: metaData[];
-  allBlogs?: metaData[];
 }
 
-const Breadcrumbs = ({ allProjects = [], allBlogs = [] }: breadcrumbProp) => {
+const Breadcrumbs = ({ allProjects = [] }: breadcrumbProp) => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const { slug } = useParams();
-  const crumbs: { page: string; href: string }[] = [];
+  const crumbs: { page: string; href: string }[] = [
+    { page: "Home", href: "/" },
+  ];
 
   const path = location.pathname;
-  if (!path.startsWith("/project") && !path.startsWith("/blog")) {
+  if (!path.startsWith("/project")) {
     return null;
   }
 
@@ -34,17 +35,6 @@ const Breadcrumbs = ({ allProjects = [], allBlogs = [] }: breadcrumbProp) => {
       const project = allProjects.find((p) => p.slug === slug);
       if (project) {
         crumbs.push({ page: project.title, href: `/project/${slug}` });
-      }
-    }
-  }
-
-  if (path.startsWith("/blog")) {
-    crumbs.push({ page: "Blog", href: "/blog" });
-
-    if (slug) {
-      const blog = allBlogs.find((p) => p.slug === slug);
-      if (blog) {
-        crumbs.push({ page: blog.title, href: `/blog/${slug}` });
       }
     }
   }
