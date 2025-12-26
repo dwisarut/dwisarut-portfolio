@@ -52,6 +52,7 @@ const ProjectDetail = () => {
     };
 
     window.addEventListener("to-home", handleExit);
+    window.scrollTo(0, 0);
     return () => window.removeEventListener("to-home", handleExit);
   });
 
