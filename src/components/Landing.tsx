@@ -12,16 +12,13 @@ import { Separator } from "@radix-ui/react-separator";
 import Work from "./Work";
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
 import MedCheck from "/medcheck.png";
 import CTscan from "/CT-Scan.png";
-import { Button } from "./ui/button";
 
 const medchecktag = ["Python", "Pyside6", "Qt-QML", "Numpy", "Pandas", "Figma"];
 const lesiontag = [
@@ -167,7 +164,10 @@ const LandingPage = () => {
             </div>
             <Separator className="my-4" />
             <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-0">
-              <Card className="flex flex-col w-120 h-120">
+              <Card
+                className="flex flex-col w-120 h-120"
+                onClick={() => handleNavigation("/project/medcheck")}
+              >
                 <CardHeader>
                   <img
                     src={MedCheck}
@@ -193,22 +193,9 @@ const LandingPage = () => {
                     </div>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-end">
-                  <CardAction>
-                    <Button onClick={() => navigate("/project/medcheck")}>
-                      Learn more
-                    </Button>
-                  </CardAction>
-                </CardFooter>
               </Card>
               <Card className="flex flex-col w-120 h-120">
                 <CardHeader>
-                  <img
-                    src={CTscan}
-                    className="w-full h-40 object-cover rounded-md"
-                  />
-                </CardHeader>
-                <CardContent className="flex-1">
                   <div className="flex flex-col gap-4">
                     <CardTitle className="inter text-2xl">
                       Lesion Detection
@@ -228,16 +215,13 @@ const LandingPage = () => {
                       ))}
                     </div>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <img
+                    src={CTscan}
+                    className="w-full h-40 object-cover rounded-md"
+                  />
                 </CardContent>
-                <CardFooter className="flex justify-end">
-                  <CardAction>
-                    <Button
-                      onClick={() => navigate("/project/lesion-detection")}
-                    >
-                      Learn more
-                    </Button>
-                  </CardAction>
-                </CardFooter>
               </Card>
             </div>
           </div>
