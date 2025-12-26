@@ -156,42 +156,6 @@ const Project = () => {
                       />
                     </CardContent>
                   </Card>
-                  {/* <figure>
-                    {proj.cover && (
-                      <img
-                        src={proj.cover}
-                        alt={proj.title}
-                        className="w-full h-40 object-cover rounded-md"
-                      />
-                    )}
-                  </figure>
-                  <div className="card-body">
-                    <h2 className="card-title text-black text-2xl self-start">
-                      {proj.title}
-                    </h2>
-                    <p className="text-base text-[hsl(0_0%_40%)]">
-                      {proj.date}
-                    </p>
-                    <p className="text-black/70 mt-2">{proj.synopsis}</p>
-                    <div className="flex gap-2 mt-3 flex-wrap text-base-100">
-                      {proj.tag.map((t) => (
-                        <span
-                          key={t}
-                          className="px-2 py-1 text-xs rounded-full text-white bg-black/80"
-                        >
-                          {t}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="card-actions self-end">
-                      <button
-                        className="btn btn-neutral btn-outline mt-4"
-                        onClick={() => navigate(`/project/${proj.slug}`)}
-                      >
-                        Learn more
-                      </button>
-                    </div>
-                  </div> */}
                 </motion.div>
               ))}
             </div>
@@ -201,7 +165,7 @@ const Project = () => {
       <footer className="footer sm:footer-horizontal bg-[hsl(0_0%_10%)] text-[hsl(0_0%_90%)] items-center justify-around mt-6 p-12">
         <aside className="flex flex-col items-start">
           <h1 className="text-lg sm:text-xl lg:text-2xl font-bold">
-            dwisarut-port.dev
+            dwisarut-portfolio
           </h1>
           <p>
             Copyright © {new Date().getFullYear()} Wisarut Donsri: All right

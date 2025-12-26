@@ -151,7 +151,7 @@ const ProjectDetail = () => {
       <footer className="footer sm:footer-horizontal bg-[hsl(0_0%_10%)] text-[hsl(0_0%_90%)] items-center justify-around mt-6 p-12">
         <aside className="flex flex-col items-start">
           <h1 className="text-lg sm:text-xl lg:text-2xl font-bold">
-            dwisarut-port.dev
+            dwisarut-portfolio
           </h1>
           <p>
             Copyright © {new Date().getFullYear()} Wisarut Donsri: All right
