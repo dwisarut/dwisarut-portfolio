@@ -91,65 +91,69 @@ const Project = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <Breadcrumbs />
-        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
-          Project
-        </h1>
+        <div className="flex flex-col ml-5 mr-5 sm:ml-20 sm:mr-20">
+          <Breadcrumbs />
+          <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
+            Project
+          </h1>
 
-        {isLoading ? (
-          <div className="flex justify-center items-center mt-6">
-            <p className="text-black/50">Loading projects...</p>
-          </div>
-        ) : projects.length === 0 ? (
-          <div className="flex justify-center items-center mt-6">
-            <p className="text-black/50">No projects found</p>
-          </div>
-        ) : (
-          <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start md:w-full gap-6 mt-6">
-            {projects.map((proj) => (
-              <motion.div
-                key={proj.title}
-                whileHover={{ scale: 1.02 }}
-                className="card bg-white flex-none w-sm md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shadow-sm"
-              >
-                <figure>
-                  {proj.cover && (
-                    <img
-                      src={proj.cover}
-                      alt={proj.title}
-                      className="w-full h-40 object-cover rounded-md"
-                    />
-                  )}
-                </figure>
-                <div className="card-body">
-                  <h2 className="card-title text-black text-2xl self-start">
-                    {proj.title}
-                  </h2>
-                  <p className="text-base text-[hsl(0_0%_40%)]">{proj.date}</p>
-                  <p className="text-black/70 mt-2">{proj.synopsis}</p>
-                  <div className="flex gap-2 mt-3 flex-wrap text-base-100">
-                    {proj.tag.map((t) => (
-                      <span
-                        key={t}
-                        className="px-2 py-1 text-xs rounded-full text-white bg-black/80"
+          {isLoading ? (
+            <div className="flex justify-center items-center mt-6">
+              <p className="text-black/50">Loading projects...</p>
+            </div>
+          ) : projects.length === 0 ? (
+            <div className="flex justify-center items-center mt-6">
+              <p className="text-black/50">No projects found</p>
+            </div>
+          ) : (
+            <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start md:w-full gap-6 mt-6">
+              {projects.map((proj) => (
+                <motion.div
+                  key={proj.title}
+                  whileHover={{ scale: 1.02 }}
+                  className="card bg-white flex-none w-sm md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shadow-sm"
+                >
+                  <figure>
+                    {proj.cover && (
+                      <img
+                        src={proj.cover}
+                        alt={proj.title}
+                        className="w-full h-40 object-cover rounded-md"
+                      />
+                    )}
+                  </figure>
+                  <div className="card-body">
+                    <h2 className="card-title text-black text-2xl self-start">
+                      {proj.title}
+                    </h2>
+                    <p className="text-base text-[hsl(0_0%_40%)]">
+                      {proj.date}
+                    </p>
+                    <p className="text-black/70 mt-2">{proj.synopsis}</p>
+                    <div className="flex gap-2 mt-3 flex-wrap text-base-100">
+                      {proj.tag.map((t) => (
+                        <span
+                          key={t}
+                          className="px-2 py-1 text-xs rounded-full text-white bg-black/80"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="card-actions self-end">
+                      <button
+                        className="btn btn-neutral btn-outline mt-4"
+                        onClick={() => navigate(`/project/${proj.slug}`)}
                       >
-                        {t}
-                      </span>
-                    ))}
+                        Learn more
+                      </button>
+                    </div>
                   </div>
-                  <div className="card-actions self-end">
-                    <button
-                      className="btn btn-neutral btn-outline mt-4"
-                      onClick={() => navigate(`/project/${proj.slug}`)}
-                    >
-                      Learn more
-                    </button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        )}
+                </motion.div>
+              ))}
+            </div>
+          )}
+        </div>
       </motion.div>
       <footer className="footer sm:footer-horizontal bg-[hsl(0_0%_10%)] text-[hsl(0_0%_90%)] items-center justify-around mt-6 p-12">
         <aside className="flex flex-col items-start">
