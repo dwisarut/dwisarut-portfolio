@@ -16,11 +16,11 @@ const CheckIcon = () => (
 
 const workHistory = [
   {
-    date: "Jun 2024 - Jul 2024",
-    role: "Student Intern",
-    company: "Store Mate Co., Ltd.",
+    date: "Aug 2025",
+    role: "Freelance Developer",
+    company: null,
     position: "start",
-    desc: "Student Intern doesn't have a fix schedule, as they are assigned to do multiple assignments during the contract. My assignments are updating stock data within Google Sheets, designing the 3D drawing for customer communication, and conduct the die research for company.",
+    desc: "A joint-cooperation with my friend to learn about technologies and experiences through multiple projects, which doesn't limited to frontend, but expand beyond. The prime example is the Image Fetcher and Lesion Detection project, which is also within the project page.",
   },
   {
     date: "Jul 2024 - Aug 2024",
@@ -30,11 +30,11 @@ const workHistory = [
     desc: "As a Quality Assurance Intern, they trained me under Quality Control division, such as patrolling to find a defective product, factory cleaning inspection for ensuring industry standard, following up with the customer for reporting work progress, and documentation to ensure Customer Relationship Management (CRM).",
   },
   {
-    date: "Aug 2025",
-    role: "Freelance Developer",
-    company: null,
+    date: "Jun 2024 - Jul 2024",
+    role: "Student Intern",
+    company: "Store Mate Co., Ltd.",
     position: "start",
-    desc: "A joint-cooperation with my friend to learn about technologies and experiences through multiple projects, which doesn't limited to frontend, but expand beyond. The prime example is the Image Fetcher and Lesion Detection project, which is also within the project page.",
+    desc: "Student Intern doesn't have a fix schedule, as they are assigned to do multiple assignments during the contract. My assignments are updating stock data within Google Sheets, designing the 3D drawing for customer communication, and conduct the die research for company.",
   },
 ];
 
