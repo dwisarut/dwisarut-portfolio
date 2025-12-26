@@ -1,6 +1,7 @@
 import { easeInOut, useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Breadcrumbs from "./Breadcrumbs";
 
 interface Project {
   title: string;
@@ -89,6 +90,7 @@ const Project = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
+        <Breadcrumbs />
         <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
           Project
         </h1>
