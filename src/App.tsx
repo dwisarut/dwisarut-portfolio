@@ -2,7 +2,6 @@
 import LandingPage from "./components/Landing";
 import AboutMe from "./components/AboutMe";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Work from "./components/Work";
 import Project from "./components/Project";
 import ProjectDetail from "./components/ProjectDetail";
@@ -12,7 +11,6 @@ function App() {
     <>
       <BrowserRouter>
         <div className="overflow-x-hidden">
-          <Navbar />
           <Routes>
             <Route path="/" element={<LandingPage />} />
             <Route path="/aboutme" element={<AboutMe />} />
