@@ -119,32 +119,34 @@ const ProjectDetail = () => {
   return (
     <>
       <motion.div
-        className="flex container flex-col bg-background min-h-screen w-full p-8 lg:p-4"
+        className="flex container bg-background min-h-screen w-full p-8"
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <Breadcrumbs allProjects={projects} />
-        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-6">
-          {project.title}
-        </h1>
+        <div className="flex flex-col ml-5 mr-5 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
+          <Breadcrumbs allProjects={projects} />
+          <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-6">
+            {project.title}
+          </h1>
 
-        <p className="text-base inter text-zinc-700 mt-2 mb-2">
-          Date posted: {project.date}
-        </p>
+          <p className="text-base inter text-zinc-700 mt-2 mb-2">
+            Date posted: {project.date}
+          </p>
 
-        <div className="flex gap-2 mt-3 flex-wrap text-base-100">
-          {project.tag.map((t) => (
-            <span
-              key={t}
-              className="inter px-2 py-1 text-xs rounded-full text-[hsl(0_0%_90%)] bg-black/80 border border-[hsl(0_0%_90%)]"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
+          <div className="flex gap-2 mt-3 flex-wrap text-base-100">
+            {project.tag.map((t) => (
+              <span
+                key={t}
+                className="inter px-2 py-1 text-xs rounded-full text-[hsl(0_0%_90%)] bg-black/80 border border-[hsl(0_0%_90%)]"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
 
-        <div className="inter prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
-          {componentReady && <ProjectComponent key={project.slug} />}
+          <div className="inter prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
+            {componentReady && <ProjectComponent key={project.slug} />}
+          </div>
         </div>
       </motion.div>
 

@@ -94,7 +94,7 @@ const Project = () => {
   return (
     <>
       <motion.div
-        className="flex container flex-col bg-background min-h-screen w-full p-8"
+        className="flex container bg-background min-h-screen w-full p-8"
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
