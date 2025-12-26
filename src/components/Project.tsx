@@ -132,9 +132,7 @@ const Project = () => {
                           {proj.date}
                         </CardDescription>
                         <CardDescription className="inter">
-                          Desktop medicine checker that guaranteed to saved
-                          disposal cost, reduce operation time, and timely
-                          restock.
+                          {proj.synopsis}
                         </CardDescription>
                         <div className="flex flex-wrap gap-2">
                           {proj.tag.map((t) => (
