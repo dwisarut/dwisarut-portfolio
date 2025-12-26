@@ -2,6 +2,13 @@ import { easeInOut, useAnimation, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Breadcrumbs from "./Breadcrumbs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 
 interface Project {
   title: string;
@@ -87,11 +94,11 @@ const Project = () => {
   return (
     <>
       <motion.div
-        className="flex container flex-col bg-background min-h-screen w-full p-8 lg:p-4"
+        className="flex container flex-col bg-background min-h-screen w-full p-8"
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <div className="flex flex-col ml-5 mr-5 sm:ml-20 sm:mr-20">
+        <div className="flex flex-col ml-5 mr-5 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
           <Breadcrumbs />
           <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
             Project
@@ -110,10 +117,46 @@ const Project = () => {
               {projects.map((proj) => (
                 <motion.div
                   key={proj.title}
-                  whileHover={{ scale: 1.02 }}
-                  className="card bg-white flex-none w-sm md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shadow-sm"
+                  className="card bg-white flex-none"
                 >
-                  <figure>
+                  <Card
+                    className="flex flex-col w-120 h-110 hover:cursor-pointer hover:bg-zinc-50"
+                    onClick={() => navigate(`/project/${proj.slug}`)}
+                  >
+                    <CardHeader className="flex-1">
+                      <div className="flex flex-col gap-4">
+                        <CardTitle className="inter text-2xl">
+                          {proj.title}
+                        </CardTitle>
+                        <CardDescription className="font-semibold">
+                          {proj.date}
+                        </CardDescription>
+                        <CardDescription className="lato">
+                          Desktop medicine checker that guaranteed to saved
+                          disposal cost, reduce operation time, and timely
+                          restock.
+                        </CardDescription>
+                        <div className="flex flex-wrap gap-2">
+                          {proj.tag.map((t) => (
+                            <span
+                              key={t}
+                              className="px-2 py-1 whitespace-nowrap text-xs inter rounded-full text-white bg-black/80"
+                            >
+                              {t}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <img
+                        src={proj.cover}
+                        alt={proj.title}
+                        className="w-full h-40 object-cover rounded-md"
+                      />
+                    </CardContent>
+                  </Card>
+                  {/* <figure>
                     {proj.cover && (
                       <img
                         src={proj.cover}
@@ -148,7 +191,7 @@ const Project = () => {
                         Learn more
                       </button>
                     </div>
-                  </div>
+                  </div> */}
                 </motion.div>
               ))}
             </div>
