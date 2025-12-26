@@ -131,7 +131,7 @@ const Project = () => {
                         <CardDescription className="font-semibold">
                           {proj.date}
                         </CardDescription>
-                        <CardDescription className="lato">
+                        <CardDescription className="inter">
                           Desktop medicine checker that guaranteed to saved
                           disposal cost, reduce operation time, and timely
                           restock.

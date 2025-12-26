@@ -136,14 +136,14 @@ const ProjectDetail = () => {
           {project.tag.map((t) => (
             <span
               key={t}
-              className="px-2 py-1 text-xs rounded-full text-[hsl(0_0%_90%)] bg-black/80 border border-[hsl(0_0%_90%)]"
+              className="inter px-2 py-1 text-xs rounded-full text-[hsl(0_0%_90%)] bg-black/80 border border-[hsl(0_0%_90%)]"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <div className="prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
+        <div className="inter prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
           {componentReady && <ProjectComponent key={project.slug} />}
         </div>
       </motion.div>

@@ -60,9 +60,9 @@ const Work = () => {
                 }`}
               >
                 <time className="font-mono italic">{item.date}</time>
-                <div className="text-base font-bold">{item.role}</div>
-                <div className="text-base">{item.company}</div>
-                <div className="text-base mt-2 md:mt-3 w-100 sm:w-125 md:w-132">
+                <div className="text-base font-bold inter">{item.role}</div>
+                <div className="text-base inter">{item.company}</div>
+                <div className="text-base inter mt-2 md:mt-3 w-100 sm:w-125 md:w-132">
                   {item.desc}
                 </div>
               </div>

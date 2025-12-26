@@ -82,7 +82,7 @@ const LandingPage = () => {
                   className="flex flex-row gap-3 w-fit h-fit"
                 >
                   <FileTextIcon className="icons" />
-                  <p className="underline lato hidden md:block">Resume</p>
+                  <p className="underline inter hidden md:block">Resume</p>
                 </Link>
                 <Link
                   to="https://www.linkedin.com/in/wisarut-donsri"
@@ -91,7 +91,7 @@ const LandingPage = () => {
                   className="flex flex-row gap-3 w-fit h-fit"
                 >
                   <LinkedInLogoIcon className="icons" />
-                  <p className="underline lato hidden md:block">LinkedIn</p>
+                  <p className="underline inter hidden md:block">LinkedIn</p>
                 </Link>
                 <Link
                   to="https://github.com/dwisarut"
@@ -100,7 +100,7 @@ const LandingPage = () => {
                   className="flex flex-row gap-3 w-fit h-fit"
                 >
                   <GitHubLogoIcon className="icons" />
-                  <p className="underline lato hidden md:block">Github</p>
+                  <p className="underline inter hidden md:block">Github</p>
                 </Link>
                 <div className="flex flex-row gap-3">
                   <Mail />
@@ -112,7 +112,7 @@ const LandingPage = () => {
 
               <div className="flex flex-col gap-4">
                 <h3 className="flex desc-text font-semibold">Resume summary</h3>
-                <ul className="list-disc space-y-2 pl-10 lato">
+                <ul className="list-disc space-y-2 pl-10 inter">
                   <li>Based in Bangkok, Thailand</li>
                   <li>Mainly React and TypeScript</li>
                   <li>Built an award-winning project</li>
@@ -127,14 +127,14 @@ const LandingPage = () => {
               About Me
             </h1>
             <Separator className="my-2" />
-            <p className="lato wrap-break-word">
+            <p className="inter wrap-break-word">
               I graduated from King Mongkut’s University of Technology Thonburi
               with a bachelor's degree in production engineering. However, I’m
               interested in programming after I’ve done my senior project,
               resulting in my departure from the industrial career path and
               continuing as an aspiring developer.
             </p>
-            <p className="lato wrap-break-word mt-4">
+            <p className="inter wrap-break-word mt-4">
               I undergone two internship programs, albeit doesn't related to the
               tech industry. This made me experiences, and adapts to the
               different work culture and understand how to cooperate with
@@ -171,7 +171,7 @@ const LandingPage = () => {
                 <CardHeader className="flex-1">
                   <div className="flex flex-col gap-4">
                     <CardTitle className="inter text-2xl">MedCheck</CardTitle>
-                    <CardDescription className="lato">
+                    <CardDescription className="inter">
                       Desktop medicine checker that guaranteed to saved disposal
                       cost, reduce operation time, and timely restock.
                     </CardDescription>
@@ -203,7 +203,7 @@ const LandingPage = () => {
                     <CardTitle className="inter text-2xl">
                       Lesion Detection
                     </CardTitle>
-                    <CardDescription className="lato">
+                    <CardDescription className="inter">
                       Automation script that process the image and highlight the
                       tumor and anomaly.
                     </CardDescription>
