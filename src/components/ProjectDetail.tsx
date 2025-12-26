@@ -128,7 +128,7 @@ const ProjectDetail = () => {
           {project.title}
         </h1>
 
-        <p className="text-base text-[hsl(0_0%_80%)] mt-2 mb-2">
+        <p className="text-base inter text-zinc-700 mt-2 mb-2">
           Date posted: {project.date}
         </p>
 
