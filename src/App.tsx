@@ -1,6 +1,5 @@
 //import { useState } from "react";
 import LandingPage from "./components/Landing";
-import AboutMe from "./components/AboutMe";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Work from "./components/Work";
 import Project from "./components/Project";
@@ -13,7 +12,6 @@ function App() {
         <div className="overflow-x-hidden">
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/work" element={<Work />} />
             <Route path="/project" element={<Project />} />
             <Route path="/project/:slug" element={<ProjectDetail />} />
