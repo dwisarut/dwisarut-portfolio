@@ -41,7 +41,7 @@ const Breadcrumbs = ({ allProjects = [] }: breadcrumbProp) => {
 
   return (
     <>
-      <div className="w-full breadcrumbs text-sm md:text-base text-[hsl(0_0%_90%)]">
+      <div className="w-full breadcrumbs text-sm md:text-base text-zinc-700">
         <ul>
           {crumbs.map((item) => {
             const currPage = path.startsWith(item.href);
