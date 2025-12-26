@@ -51,6 +51,7 @@ const Project = () => {
     };
 
     window.addEventListener("to-home", handleExit);
+    window.scrollTo(0, 0);
     return () => window.removeEventListener("to-home", handleExit);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
