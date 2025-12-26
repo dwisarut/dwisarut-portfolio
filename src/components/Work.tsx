@@ -41,9 +41,9 @@ const workHistory = [
 const Work = () => {
   return (
     <>
-      <div className="flex container flex-col bg-background min-h-screen w-full p-4">
+      <div className="flex flex-col bg-background min-h-screen w-full">
         <ul
-          className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+          className="timeline timeline-snap-icon max-xl:timeline-compact timeline-vertical"
           role="list"
         >
           {workHistory.map((item, index) => (
@@ -56,7 +56,7 @@ const Work = () => {
                 className={`timeline-${
                   item.position
                 } mb-10 pl-2 pr-2 pt-[0.3rem] ${
-                  item.position === "start" ? "md:text-end" : "md:text-start"
+                  item.position === "start" ? "xl:text-end" : "xl:text-start"
                 }`}
               >
                 <time className="font-mono italic">{item.date}</time>
