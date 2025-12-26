@@ -123,7 +123,7 @@ const ProjectDetail = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <div className="flex flex-col ml-5 mr-5 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
+        <div className="flex flex-col ml-5 mr-5 md:ml-20 md:mr-20 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
           <Breadcrumbs allProjects={projects} />
           <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-6">
             {project.title}
