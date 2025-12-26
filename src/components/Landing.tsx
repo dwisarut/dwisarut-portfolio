@@ -165,16 +165,10 @@ const LandingPage = () => {
             <Separator className="my-4" />
             <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-0">
               <Card
-                className="flex flex-col w-120 h-120"
+                className="flex flex-col w-120 h-100 hover:cursor-pointer hover:bg-zinc-50"
                 onClick={() => handleNavigation("/project/medcheck")}
               >
-                <CardHeader>
-                  <img
-                    src={MedCheck}
-                    className="w-full h-40 object-cover rounded-md"
-                  />
-                </CardHeader>
-                <CardContent className="flex-1">
+                <CardHeader className="flex-1">
                   <div className="flex flex-col gap-4">
                     <CardTitle className="inter text-2xl">MedCheck</CardTitle>
                     <CardDescription className="lato">
@@ -192,10 +186,19 @@ const LandingPage = () => {
                       ))}
                     </div>
                   </div>
+                </CardHeader>
+                <CardContent>
+                  <img
+                    src={MedCheck}
+                    className="w-full h-40 object-cover rounded-md"
+                  />
                 </CardContent>
               </Card>
-              <Card className="flex flex-col w-120 h-120">
-                <CardHeader>
+              <Card
+                className="flex flex-col w-120 h-100 hover:cursor-pointer hover:bg-zinc-50"
+                onClick={() => handleNavigation("/project/lesion-detection")}
+              >
+                <CardHeader className="flex-1">
                   <div className="flex flex-col gap-4">
                     <CardTitle className="inter text-2xl">
                       Lesion Detection
