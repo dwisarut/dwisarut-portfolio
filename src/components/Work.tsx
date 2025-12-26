@@ -62,7 +62,9 @@ const Work = () => {
                 <time className="font-mono italic">{item.date}</time>
                 <div className="text-base font-bold">{item.role}</div>
                 <div className="text-base">{item.company}</div>
-                <div className="text-base mt-2 md:mt-3 w-132">{item.desc}</div>
+                <div className="text-base mt-2 md:mt-3 w-100 sm:w-125 md:w-132">
+                  {item.desc}
+                </div>
               </div>
               {index !== workHistory.length - 1 && <hr />}
             </li>

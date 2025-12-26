@@ -120,7 +120,7 @@ const Project = () => {
                   className="card bg-white flex-none"
                 >
                   <Card
-                    className="flex flex-col w-120 h-110 hover:cursor-pointer hover:bg-zinc-50"
+                    className="flex flex-col w-110 sm:w-120 h-70 sm:h-110 hover:cursor-pointer hover:bg-zinc-50"
                     onClick={() => navigate(`/project/${proj.slug}`)}
                   >
                     <CardHeader className="flex-1">
@@ -152,7 +152,7 @@ const Project = () => {
                       <img
                         src={proj.cover}
                         alt={proj.title}
-                        className="w-full h-40 object-cover rounded-md"
+                        className="w-full h-40 object-cover rounded-md hidden sm:block"
                       />
                     </CardContent>
                   </Card>
