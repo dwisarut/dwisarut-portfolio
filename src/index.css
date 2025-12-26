@@ -47,7 +47,7 @@
 }
 
 @utility header-text {
-  @apply text-6xl sm:text-7xl lg:text-8xl;
+  @apply text-5xl sm:text-6xl lg:text-7xl;
   font-family: "Inter", sans-serif;
 }
 
