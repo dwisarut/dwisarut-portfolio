@@ -1,6 +1,3 @@
-import { easeInOut, useAnimation, motion } from "framer-motion";
-import { useEffect } from "react";
-
 const CheckIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -42,99 +39,36 @@ const workHistory = [
 ];
 
 const Work = () => {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.set({ opacity: 0, y: -20 });
-    controls.start({
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.2, ease: easeInOut, delay: 0.2 },
-    });
-
-    const handleExit = () => {
-      controls.start({
-        x: "100vh",
-        opacity: 0,
-        transition: { duration: 0.4, ease: easeInOut },
-      });
-    };
-
-    window.addEventListener("to-home", handleExit);
-    return () => window.removeEventListener("to-home", handleExit);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
   return (
     <>
-      <motion.div
-        className="flex container flex-col bg-background min-h-screen w-full p-4"
-        animate={controls}
-        initial={{ opacity: 0, y: -20 }}
-      >
-        <h1 className="flex header-text justify-center md:justify-start font-bold pt-6">
-          Work
-        </h1>
-        <div className="mt-12">
-          <ul
-            className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
-            role="list"
-          >
-            {workHistory.map((item, index) => (
-              <li key={index}>
-                {index !== 0 && <hr />}
-                <div className="timeline-middle">
-                  <CheckIcon />
-                </div>
-                <div
-                  className={`timeline-${
-                    item.position
-                  } mb-10 pl-2 pr-2 pt-[0.3rem] ${
-                    item.position === "start" ? "md:text-end" : "md:text-start"
-                  }`}
-                >
-                  <time className="font-mono italic text-[hsl(0_0%_90%)]">
-                    {item.date}
-                  </time>
-                  <div className="text-base sm:text-lg text-[hsl(0_0%_90%)] lg:text-xl font-bold">
-                    {item.role}
-                  </div>
-                  <div className="text-base text-[hsl(0_0%_90%)]">
-                    {item.company}
-                  </div>
-                  <div className="text-base md:text-lg mt-2 md:mt-3 text-[hsl(0_0%_90%)]">
-                    {item.desc}
-                  </div>
-                </div>
-                {index !== workHistory.length - 1 && <hr />}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </motion.div>
-      <footer className="footer sm:footer-horizontal bg-[hsl(0_0%_10%)] text-[hsl(0_0%_90%)] items-center justify-around mt-6 p-12">
-        <aside className="flex flex-col items-start">
-          <h1 className="text-lg sm:text-xl lg:text-2xl font-bold">
-            dwisarut-port.dev
-          </h1>
-          <p>
-            Copyright © {new Date().getFullYear()} Wisarut Donsri: All right
-            reserved
-          </p>
-        </aside>
-        <aside className="flex flex-col items-start">
-          <h1 className="text-base sm:text-lg lg:text-xl font-bold">Contact</h1>
-          <a
-            className="underline"
-            href="https://www.linkedin.com/in/wisarut-donsri"
-          >
-            LinkedIn
-          </a>
-          <a className="underline" href="https://github.com/dwisarut">
-            Github
-          </a>
-        </aside>
-      </footer>
+      <div className="flex container flex-col bg-background min-h-screen w-full p-4">
+        <ul
+          className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
+          role="list"
+        >
+          {workHistory.map((item, index) => (
+            <li key={index}>
+              {index !== 0 && <hr />}
+              <div className="timeline-middle">
+                <CheckIcon />
+              </div>
+              <div
+                className={`timeline-${
+                  item.position
+                } mb-10 pl-2 pr-2 pt-[0.3rem] ${
+                  item.position === "start" ? "md:text-end" : "md:text-start"
+                }`}
+              >
+                <time className="font-mono italic">{item.date}</time>
+                <div className="text-base font-bold">{item.role}</div>
+                <div className="text-base">{item.company}</div>
+                <div className="text-base mt-2 md:mt-3 w-132">{item.desc}</div>
+              </div>
+              {index !== workHistory.length - 1 && <hr />}
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   );
 };
