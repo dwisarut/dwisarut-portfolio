@@ -94,13 +94,13 @@ const Project = () => {
   return (
     <>
       <motion.div
-        className="flex container bg-background min-h-screen w-full p-8"
+        className="flex container justify-center bg-background min-h-screen w-full p-8"
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <div className="flex flex-col ml-5 mr-5 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
+        <div className="flex flex-col lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
           <Breadcrumbs />
-          <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-12">
+          <h1 className="flex header-text justify-center xl:justify-start font-bold pt-6 mb-12">
             Project
           </h1>
 
@@ -113,7 +113,7 @@ const Project = () => {
               <p className="text-black/50">No projects found</p>
             </div>
           ) : (
-            <div className="flex flex-col justify-center self-center md:flex-row md:flex-wrap md:justify-start md:w-full gap-6 mt-6">
+            <div className="flex flex-col justify-center self-center xl:flex-row xl:flex-wrap xl:justify-start xl:w-full gap-6 mt-6">
               {projects.map((proj) => (
                 <motion.div
                   key={proj.title}
