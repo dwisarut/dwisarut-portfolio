@@ -14,7 +14,7 @@ jobs:
       id-token: write
     steps:
       - name: Checkout code
-        uses: actions/actions@v4
+        uses: actions/checkout@v4
 
       - name: Deploy to Github
         uses: peaceiris/actions-gh-pages@v4
