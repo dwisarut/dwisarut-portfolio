@@ -62,7 +62,11 @@ const Work = () => {
                 <time className="font-mono italic">{item.date}</time>
                 <div className="text-base font-bold inter">{item.role}</div>
                 <div className="text-base inter">{item.company}</div>
-                <div className="text-base inter mt-2 w-[calc(100%-16px)]">
+                <div
+                  className={`text-base inter mt-2 w-[calc(100%-16px)] ${
+                    item.position === "start" ? "xl:ml-4" : ""
+                  }`}
+                >
                   {item.desc}
                 </div>
               </div>
