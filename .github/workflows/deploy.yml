@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Github
-        uses: dwisarut/dwisarut-portfolio@v2
+        uses: dwisarut/dwisarut-portfolio
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
