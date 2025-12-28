@@ -129,7 +129,7 @@ const Project = () => {
                           {proj.title}
                         </CardTitle>
                         <CardDescription className="font-semibold">
-                          {proj.date}
+                          Posted: {proj.date}
                         </CardDescription>
                         <CardDescription className="inter">
                           {proj.synopsis}
