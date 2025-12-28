@@ -98,7 +98,7 @@ const Project = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <div className="flex flex-col lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
+        <div className="w-full flex flex-col lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
           <Breadcrumbs />
           <h1 className="flex header-text justify-center xl:justify-start font-bold pt-6 mb-12">
             Project
