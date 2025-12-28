@@ -1,0 +1,23 @@
+name: Deploy to Github
+
+on:
+  push:
+    branches:
+      - port-v2
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout code
+        uses: actions/actions@v4
+
+      - name: Deploy to Github
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
