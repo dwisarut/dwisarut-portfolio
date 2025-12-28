@@ -113,7 +113,7 @@ const Project = () => {
               <p className="text-zinc-800 inter">No projects found</p>
             </div>
           ) : (
-            <div className="flex flex-col justify-center self-center xl:flex-row xl:flex-wrap xl:justify-start xl:w-full gap-6 mt-6">
+            <div className="flex flex-col w-full justify-center items-center xl:flex-row xl:flex-wrap xl:justify-start xl:w-full gap-6 mt-6">
               {projects.map((proj) => (
                 <motion.div
                   key={proj.title}

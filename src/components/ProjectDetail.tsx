@@ -123,9 +123,9 @@ const ProjectDetail = () => {
         animate={controls}
         initial={{ opacity: 0, y: -20 }}
       >
-        <div className="flex flex-col ml-5 mr-5 md:ml-20 md:mr-20 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
+        <div className="flex flex-col md:ml-20 md:mr-20 lg:ml-46 lg:mr-46 xl:ml-20 xl:mr-20">
           <Breadcrumbs allProjects={projects} />
-          <h1 className="flex header-text justify-center md:justify-start font-bold pt-6 mb-6">
+          <h1 className="flex header-text justify-start font-bold pt-6 mb-6">
             {project.title}
           </h1>
 
@@ -144,7 +144,7 @@ const ProjectDetail = () => {
             ))}
           </div>
 
-          <div className="inter prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
+          <div className="inter text-base md:text-xl prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
             {componentReady && <ProjectComponent key={project.slug} />}
           </div>
         </div>
