@@ -1,0 +1,69 @@
+---
+title: Image Fetcher
+slug: image-fetcher
+type: project
+synopsis: "LINE bot that fetch images from Google Drive with Breath-First Search algorithm and Flask API."
+date: 29 Dec 2025
+awarded: false;
+tag:
+  [
+    "Python",
+    "Flask",
+    "line-bot-sdk",
+    "Docker",
+    "Google Cloud Run",
+    "Google API",
+  ]
+cover: "/ImageFetcher.png"
+---
+
+![Image Fetcher](/ImageFetcher.png)
+This is the contracted project done for Finesse Flower Manufacturing Co., Ltd. which can fetch pictures from Google Drive via Breadth-First Search Algorithm and Google API.
+However, I'm not responsible for the search algorithm implementation, but the **LINE bot's API and LINE webhook API integration**.
+
+### The problem
+
+---
+
+The problems that our customer presented are mainly:
+
+- Difficulty tracking the prop's progress.
+- Communication between Flower Corp. and their customer, or their internal communication.
+- They used to have their own functioning bot, but their bot's service is discontinue.
+
+As you can see, this is their requirement that we need to address, but we also encounter multiple problems while we developing the bot such as:
+
+- Budget constraint resulting in the limited deployment platform option.
+- Miscommunication between our team and our customer.
+- User Experiences while using the bot.
+- Response time is too slow (approximately 1 minute after text command).
+
+### Action
+
+---
+
+There are multiple problem which related to technical issue, so our actions toward these problems are:
+
+1. Optimizing the LINE message response within Python's line-bot-sdk (textMessage and pushMessageRequest).
+2. More communication and testing, with customer's feedback.
+3. Warm caching for more frequent pictures.
+
+### Result
+
+---
+
+1. Due to the message optimization, resulted in decreasing LINE package cost significantly, left with only monthly deployment cost.
+2. Instantaneous response time after text command, utilizing parallel threading.
+3. Addressed multiple UX issue, such as proximity search from incomplete product code by user, image carousel for big bundles of pictures, and text command instructions for user.
+
+<img
+  className="w-full hidden lg:block"
+  src="/ImageFetcher_prev.png"
+  alt="Preview"
+/>
+
+<div className="flex flex-col w-full items-center block lg:hidden gap-1">
+  <img className="w-sm" src="/imgf_prev1.png" alt="Preview 1" />
+  <img className="w-sm" src="/imgf_prev2.png" alt="Preview 2" />
+  <img className="w-sm" src="/imgf_prev3.png" alt="Preview 3" />
+</div>

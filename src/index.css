@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@plugin "daisyui";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-primary: hsl(var(--primary));
+  --color-secondary: hsl(var(--secondary));
+  --color-tertiary: hsl(var(--tertiary));
+  --color-background: hsl(var(--background));
+  --color-contrast-text: hsl(var(--contrast-text));
+}
+
+@utility container {
+  @apply px-4 sm:px-8;
+  margin-inline: auto;
+
+  @media (min-width: 640px) {
+    max-width: 640px;
+  }
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+@utility inter {
+  font-family: "Inter", sans-serif;
+}
+
+@utility lato {
+  font-family: "Lato", sans-serif;
+}
+
+@utility button {
+  @apply btn btn-link w-36 h-14 no-underline;
+  color: hsl(var(--secondary));
+}
+
+@utility header-text {
+  @apply text-5xl sm:text-6xl lg:text-7xl inter;
+}
+
+@utility desc-text {
+  @apply text-xl sm:text-2xl inter;
+}
+
+@utility sub-desc-text {
+  @apply text-base sm:text-lg lg:text-xl inter;
+}
+
+@utility content-text {
+  @apply text-base sm:text-lg lg:text-xl inter;
+}
+
+@utility quote {
+  @apply content-text italic;
+  font-family: "Lato", sans-serif;
+}
+
+@utility icons {
+  @apply w-6 h-auto;
+}
+
+@utility prose {
+  @apply prose-h1:text-[hsl(0_0%_10%)] prose-h2:text-[hsl(0_0%_30%)] prose-h3:text-[hsl(0_0%_30%)] text-[hsl(0_0%_30%)] prose-ol:list-decimal prose-li:marker:text-[hsl(0_0%_30%)] prose-ul:list-disc prose-hr:border-[hsl(0_0%__80%)] prose-strong:text-[hsl(0_0%_30%)]
+}
+
+@utility proseImg {
+  @apply prose-img:rounded-sm
+}
+
+#root {
+   max-width: 100%;
+   margin: 0 auto;
+   padding: 0;
+   text-align: left;
+   font-family: "Lato", "Inter", sans-serif;
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.65rem;
+  --background:  hsl(0 0% 100%);
+  --foreground:  hsl(0 0% 3.9%);
+  --card:  hsl(0 0% 100%);
+  --card-foreground:  hsl(0 0% 3.9%);
+  --popover:  hsl(0 0% 100%);
+  --popover-foreground:  hsl(0 0% 3.9%);
+  --primary:  hsl(0 0% 9%);
+  --primary-foreground:  hsl(0 0% 98%);
+  --secondary:  hsl(0 0% 96.1%);
+  --secondary-foreground:  hsl(0 0% 9%);
+  --muted:  hsl(0 0% 96.1%);
+  --muted-foreground:  hsl(0 0% 45.1%);
+  --accent:  hsl(0 0% 96.1%);
+  --accent-foreground:  hsl(0 0% 9%);
+  --destructive:  hsl(0 84.2% 60.2%);
+  --destructive-foreground:  hsl(0 0% 98%);
+  --border:  hsl(0 0% 89.8%);
+  --input:  hsl(0 0% 89.8%);
+  --ring:  hsl(0 0% 3.9%);
+  --chart-1:  hsl(12 76% 61%);
+  --chart-2:  hsl(173 58% 39%);
+  --chart-3:  hsl(197 37% 24%);
+  --chart-4:  hsl(43 74% 66%);
+  --chart-5:  hsl(27 87% 67%);
+ }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
