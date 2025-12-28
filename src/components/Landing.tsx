@@ -165,7 +165,7 @@ const LandingPage = () => {
             <Separator className="my-4" />
             <div className="flex flex-col xl:flex-row items-center justify-between gap-12 xl:gap-0">
               <Card
-                className="flex flex-col w-[calc(100%-16px)] xl:w-[calc(50%-12px)] h-55 sm:h-100 hover:cursor-pointer hover:bg-zinc-50"
+                className="flex flex-col w-[calc(100%-16px)] xl:w-[calc(50%-12px)] h-60 sm:h-100 hover:cursor-pointer hover:bg-zinc-50"
                 onClick={() => handleNavigation("/project/medcheck")}
               >
                 <CardHeader className="flex-1">
@@ -195,7 +195,7 @@ const LandingPage = () => {
                 </CardContent>
               </Card>
               <Card
-                className="flex flex-col w-[calc(100%-16px)] xl:w-[calc(50%-12px)] h-55 sm:h-100 hover:cursor-pointer hover:bg-zinc-50"
+                className="flex flex-col w-[calc(100%-16px)] xl:w-[calc(50%-12px)] h-60 sm:h-100 hover:cursor-pointer hover:bg-zinc-50"
                 onClick={() => handleNavigation("/project/lesion-detection")}
               >
                 <CardHeader className="flex-1">

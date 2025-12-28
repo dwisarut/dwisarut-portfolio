@@ -105,12 +105,12 @@ const Project = () => {
           </h1>
 
           {isLoading ? (
-            <div className="flex justify-center items-center mt-6">
-              <p className="text-black/50">Loading projects...</p>
+            <div className="flex flex-col justify-center self-center xl:flex-row xl:flex-wrap xl:justify-start xl:w-full gap-6 mt-6">
+              <p className="text-zinc-800 inter">Loading projects...</p>
             </div>
           ) : projects.length === 0 ? (
-            <div className="flex justify-center items-center mt-6">
-              <p className="text-black/50">No projects found</p>
+            <div className="flex flex-col justify-center self-center xl:flex-row xl:flex-wrap xl:justify-start xl:w-full gap-6 mt-6">
+              <p className="text-zinc-800 inter">No projects found</p>
             </div>
           ) : (
             <div className="flex flex-col justify-center self-center xl:flex-row xl:flex-wrap xl:justify-start xl:w-full gap-6 mt-6">
