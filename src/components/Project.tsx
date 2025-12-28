@@ -179,7 +179,7 @@ const Project = () => {
             LinkedIn
           </a>
           <a className="underline" href="https://github.com/dwisarut">
-            Github
+            GitHub
           </a>
         </aside>
       </footer>

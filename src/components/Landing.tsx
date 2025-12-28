@@ -100,7 +100,7 @@ const LandingPage = () => {
                   className="flex flex-row gap-3 w-fit h-fit"
                 >
                   <GitHubLogoIcon className="icons" />
-                  <p className="underline inter hidden md:block">Github</p>
+                  <p className="underline inter hidden md:block">GitHub</p>
                 </Link>
                 <div className="flex flex-row gap-3">
                   <Mail />
@@ -250,7 +250,7 @@ const LandingPage = () => {
             LinkedIn
           </a>
           <a className="underline" href="https://github.com/dwisarut">
-            Github
+            GitHub
           </a>
         </aside>
       </footer>
