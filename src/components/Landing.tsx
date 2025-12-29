@@ -7,7 +7,7 @@ import {
 } from "@radix-ui/react-icons";
 import { Mail, ChevronRight } from "lucide-react";
 import { useEffect } from "react";
-import HeroImage from "/heropic.png";
+import HeroImage from "/heropic.webp";
 import { Separator } from "@radix-ui/react-separator";
 import Work from "./Work";
 import {
