@@ -144,7 +144,7 @@ const ProjectDetail = () => {
             ))}
           </div>
 
-          <div className="inter text-base md:text-xl prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
+          <div className="inter text-base prose prose-lg max-w-none dark:prose-invert prose-hr:my-6 proseImg mt-6">
             {componentReady && <ProjectComponent key={project.slug} />}
           </div>
         </div>
