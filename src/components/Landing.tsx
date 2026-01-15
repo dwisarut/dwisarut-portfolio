@@ -67,9 +67,9 @@ const LandingPage = () => {
               className="w-sm h-fit rounded-xs hidden xl:block"
             />
             <div className="flex flex-col ml-0 text-left lg:justify-between gap-3 xl:gap-0">
-              <h1 className="flex inter font-semibold leading-none">
+              {/* <h1 className="flex inter font-semibold leading-none">
                 Frontend Developer
-              </h1>
+              </h1> */}
               <h2 className="flex header-text font-bold leading-none">
                 Wisarut Donsri
               </h2>
