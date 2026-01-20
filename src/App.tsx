@@ -1,4 +1,3 @@
-//import { useState } from "react";
 import LandingPage from "./components/Landing";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Work from "./components/Work";
