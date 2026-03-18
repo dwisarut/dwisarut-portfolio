@@ -1,0 +1,67 @@
+---
+title: DealMaxxingCLI
+slug: dealmaxxingcli
+type: project
+synopsis: "CLI tool for finding cheapest video games from various sites."
+date: 18 Mar 2026
+awarded: false;
+tag: ["Golang", "Command-Line Tool"]
+cover: "/Dealmaxxing.png"
+---
+
+![DealMaxxingCLI](/Dealmaxxing.png)
+
+<a
+  className="text-zinc-500 inline-block"
+  href="https://github.com/dwisarut/dealmaxxingCLI"
+>
+  Github repository
+</a>
+
+This is the CLI (Command-Line Interface) tool that developed for finding discounted video games for my personal use by utilizing the public REST API (Application Programming Interface) named CheapShark API.
+The CLI request the data to the CheapShark API endpoints, and the response with the JSON data, which will be cached, processed, and display the results. In this project, I use Golang
+because it is the most suitable to make a robust CLI tools.
+
+### The problem
+
+---
+
+The problems that I try to solve with DealMaxxingCLI:
+
+- Multiple stores have different discounted game.
+- Reduce the time to search for the cheapest desired game.
+
+The problem that I encountered during the development:
+
+- The unsanitized user input, resulting in error response and unforseen searching behaviors.
+- The CLI fetch the data every time I search the game, resulting in exceeding rate limit.
+- The raw data from JSON doesn't suitable for displaying to the user.
+
+### Action
+
+---
+
+To solve multiple problems, I implement the following features:
+
+1. Implement ID command (e.g. "id Bioshock") to find all of the unique ID of desired game.
+2. Implement GET command (e.g. "get 234") to find all of the stores that sells the desired game, and comparing the prices in the process.
+3. Implement hashmap to mapping stores data, which uses for processing the JSON data and display correct stores (e.g. "1" to "Steam").
+4. Implement basic caching algorithm, to reduce fetching for the same game more than once.
+5. Implement error handling with status code detection, mainly handling 403 and 404.
+6. Implement parser logic to separate command and argument, and encoding the argument for request API.
+7. Sanitize the user input by detecting &, =, ', and ", which will resulted in input rejection.
+
+### Preview
+
+![DealMaxxingCLI](/DMXCLI_help.gif)
+
+![DealMaxxingCLI](/DMXCLI_id.gif)
+
+![DealMaxxingCLI](/DMXCLI_get.gif)
+
+### Result
+
+---
+
+Usually, I spend around 5 minutes to check for discounted game on Steam, but there are a lots of alternative stores that have different pricing,
+which is 30+ stores such as Fanatical, 2game, Humble Bundle, etc. After I developed DealMaxxingCLI, it can shortened the time to within 1 minute.
