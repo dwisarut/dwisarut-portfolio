@@ -114,9 +114,9 @@ const LandingPage = () => {
                 <h3 className="flex desc-text font-semibold">Summary</h3>
                 <ul className="list-disc space-y-2 pl-10 inter">
                   <li>Based in Bangkok, Thailand</li>
-                  <li>Mainly using React and TypeScript</li>
-                  <li>Built an award-winning project</li>
-                  <li>Lately contributed as a freelance developer</li>
+                  <li>Mainly using React and TypeScript, while learning Go</li>
+                  <li>Built a runner-up project</li>
+                  <li>Past experiences as a freelance developer</li>
                 </ul>
               </div>
             </div>
