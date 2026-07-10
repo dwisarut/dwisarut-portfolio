@@ -1,9 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --color-nord0: #2e3440;
+  --color-nord1: #3b4252;
+  --color-nord2: #434c5e;
+  --color-nord3: #4c566a;
+  --color-nord4: #eceff4;
+  --color-nord5: #e5e9f0;
+  --color-nord6: #d8dee9;
+}
+
 :root {
   font-family: "Geist", sans-serif;
-  background-color: #f2f2f2;
+  background-color: var(--color-nord4);
 }
 
 html {
