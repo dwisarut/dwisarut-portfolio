@@ -1,5 +1,14 @@
 ---
+import MiniProject from "../components/MiniProject.svelte";
 import MainLayout from "../layouts/MainLayout.astro";
+
+const projects = Object.values(
+  import.meta.glob("../contents/projects/*.md", { eager: true }),
+);
 ---
 
-<MainLayout title="dwisarut - Projects" />
+<MainLayout title="Projects • dwisarut">
+  <main>
+    <MiniProject />
+  </main>
+</MainLayout>
